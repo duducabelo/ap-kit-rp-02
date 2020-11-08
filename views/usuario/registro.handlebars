@@ -1,0 +1,25 @@
+<div class="card">
+  <div class="card-body">
+    <h3>Aqui vc faz o seu cadastro</h3>
+    <button onclick="history.back()">
+        <img src="/imagens/voltar.png" alt="voltar" style="width: 25px ">
+    </button>
+    <form action="/usuario/registro" method="post">
+    	<label for="nome">Nome</label>
+    		<input type="text" id="nome" name="nome" placeholder="Seu nome" class="form-control" required> {{!-- required --}}
+        <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="Seu email" class="form-control" required> 
+    	<label for="senha">Senha</label>
+    		<input type="text" id="senha" name="senha" placeholder="Seu senha" class="form-control" required>
+        <label for="senha2">Confirmar senha</label>
+            <input type="text" id="senha2" name="senha2" placeholder="Seu confirmar senha" class="form-control" >    
+    	
+        {{#each erros}}
+            <div class="text-danger">{{senha}}</div>
+        {{/each}}
+
+    	<button type="submit" class="btn btn-dark mt-3">salvar</button>	
+        
+    </form>
+  </div>
+</div>

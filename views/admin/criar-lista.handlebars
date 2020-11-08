@@ -1,0 +1,42 @@
+<ul class="nav justify-content-center bg-dark">
+  <li class="nav-item">
+    <a class="nav-link btn btn-outline-light " href="/admin/eduardo">admin</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link btn btn-outline-light ml-2" href="/admin/sobre">Sobre</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link btn btn-outline-light  ml-2 " href="/admin/criar-lista">Criar Lista</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link btn btn-outline-light  ml-2 " href="/admin/criar-postagens">Criar Postagens</a>
+  </li>
+</ul>
+{{#each erros}}
+    <div class="alert alert-dark">{{texto}}</div>
+{{/each}}
+
+<div class="card">
+  <div class="card-body">
+    <h3>Aqui vc cria a sua lista</h3>
+    <button onclick="history.back()">
+        <img src="/imagens/voltar.png" alt="voltar" style="width: 25px ">
+    </button>
+    <form action="/admin/criar-lista" method="post">
+    	<label for="nome">Nome</label>
+    		<input type="text" id="nome" name="nome" placeholder="Seu nome" class="form-control" required> 
+    	<label for="sobrenome">Sobrenome</label>
+    		<input type="text" id="sobrenome" name="sobrenome" placeholder="Seu sobrenome" class="form-control" required>
+    	<label for="email">Email</label>
+    		<input type="email" id="email" name="email" placeholder="Seu email" class="form-control" required>	
+    	<button type="submit" class="btn btn-dark mt-3">salvar</button>	
+        <a  href="/admin/listar" class="btn btn-danger mt-3">editar lista</a>
+        <a  href="#" class="btn btn-dark mt-3">Ver Listas</a>
+    </form>
+  </div>
+</div>
+
+
+
+{{!-- <p>nao esta imprimindo erro do handlebars para resolver <strong>.sort({date:'desc'}).lean()</strong> </p>
+ --}}

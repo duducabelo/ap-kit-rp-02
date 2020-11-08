@@ -1,0 +1,43 @@
+<ul class="nav justify-content-center bg-dark">
+  <li class="nav-item">
+    <a class="nav-link btn btn-outline-light " href="/admin/eduardo">admin</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link btn btn-outline-light ml-2" href="/admin/sobre">Sobre</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link btn btn-outline-light  ml-2 " href="/admin/criar-lista">Criar Lista</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link btn btn-outline-light  ml-2 " href="/admin/criar-postagens">Criar Postagens</a>
+  </li>
+</ul>
+<div class="container">
+	<h1>Area de ediçao Lista</h1>
+    <button onclick="history.back()">
+        <img src="/imagens/voltar.png" alt="voltar" style="width: 25px ">
+    </button>
+</div>
+{{#each listas}}
+	
+    <div class="card">
+        <div class="card-body">
+            <h3>Nome: {{this.nome}}</h3>
+            <h3>Sobrenome: {{this.sobrenome}}</h3>
+            <h4>Email: {{this.email}}</h4>
+            <small>data : {{this.date}}</small>
+            <a href="/admin/editar-lista/{{_id}}" class="btn btn-danger mt-3">editar</a>
+            <form action="/admin/deletar-lista" method="post" >
+                <input type="hidden" name="id" value="{{_id}}">
+                <button type="submit" class="btn btn-danger mt-3">DELETAR</button>
+                <a href="/admin/criar-lista" class="btn btn-dark mt-3">Criar lista</a>
+                <a  href="#" class="btn btn-dark mt-3">Ver Listas</a>   
+            </form>
+        </div>
+    </div>
+{{else}}
+    <div class="container">
+        <h4>Não a lista cadastrada</h4>
+    </div>
+{{/each}}
+

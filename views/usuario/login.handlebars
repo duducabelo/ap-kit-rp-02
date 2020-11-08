@@ -1,0 +1,23 @@
+<div class="card">
+  <div class="card-body">
+    <h3>Aqui vc faz o login</h3>
+    <button onclick="history.back()">
+        <img src="/imagens/voltar.png" alt="voltar" style="width: 25px ">
+    </button>
+
+    {{#if error}}
+            <div class="alert alert-dark">{{error}}</div>
+    {{/if}}
+    
+    <form action="/usuario/login" method="post">
+    	
+        <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="Seu email" class="form-control" required> 
+    	<label for="senha">Senha</label>
+    		<input type="text" id="senha" name="senha" placeholder="Seu senha" class="form-control" required>
+            
+    	<button type="submit" class="btn btn-dark mt-3">Entrar</button>	
+        
+    </form>
+  </div>
+</div>

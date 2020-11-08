@@ -1,0 +1,35 @@
+<ul class="nav justify-content-center bg-dark">
+  <li class="nav-item">
+    <a class="nav-link btn btn-outline-light " href="/admin/eduardo">admin</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link btn btn-outline-light ml-2" href="/admin/sobre">Sobre</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link btn btn-outline-light  ml-2 " href="/admin/criar-lista">Criar Lista</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link btn btn-outline-light  ml-2 " href="/admin/criar-postagens">Criar Postagens</a>
+  </li>
+</ul>
+{{#each erros}}
+    <div class="alert alert-dark">{{texto}}</div>
+{{/each}}
+<div class="card">
+  <div class="card-body">
+    <h3>Ediatar Lista</h3>
+    <button onclick="history.back()">
+        <img src="/imagens/voltar.png" alt="voltar" style="width: 25px ">
+    </button>
+    <form action="/admin/lista-editada" method="post">
+    	<input type="hidden" name="id" value="{{listas._id}}">
+    	<label for="nome">Nome</label>
+    		<input type="text" id="nome" name="nome" placeholder="Seu nome" class="form-control" value="{{listas.nome}}" required> 
+    	<label for="sobrenome">Sobrenome</label>
+    		<input type="text" id="sobrenome" name="sobrenome" placeholder="Seu sobrenome" class="form-control" value="{{listas.sobrenome}}" required>
+    	<label for="email">Email</label>
+    		<input type="email" id="email" name="email" placeholder="Seu email" class="form-control" value="{{listas.email}}" required>	
+    	<button type="submit" class="btn btn-danger mt-3">Ediatar</button>	
+    </form>
+  </div>
+</div>

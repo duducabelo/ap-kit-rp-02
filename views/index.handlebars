@@ -1,0 +1,66 @@
+
+
+<h1>page principal</h1>
+
+<div class="container">
+  <div class="card-deck mb-3 text-center">
+  		
+  		{{#each postegens}}
+		    <div class="card mb-4 shadow-sm">
+		      <div class="card-header">
+		        <h4 class="my-0 font-weight-normal">
+		        	<font style="vertical-align: inherit;">
+		        		<font style="vertical-align: inherit;">futoro foto</font>
+		        	</font>
+		        </h4>
+		      </div>
+		      <div class="card-body">
+		        <h3 class="card-title pricing-card-title">
+		        	<font style="vertical-align: inherit;">
+		        		<font style="vertical-align: inherit;">{{titulo}}</font>
+		        	</font>
+		        	{{!-- <small class="text-muted">
+		        		<font style="vertical-align: inherit;">
+		        			<font style="vertical-align: inherit;">/ mês</font>
+		        		</font>
+		        	</small> --}}
+		        </h3>
+		        <hr>
+		        <ul class="list-unstyled mt-3 mb-4">
+		          <li>
+		          	<font style="vertical-align: inherit;">
+		          		<font style="vertical-align: inherit;">{{descricao}}</font>
+		          	</font>
+		          </li>
+		          <hr>
+		          <li>
+		          	<font style="vertical-align: inherit;">
+		          		<font style="vertical-align: inherit;">{{conteudo}}</font>
+		          	</font>
+		          </li>
+		          <hr>
+		          <li>
+		          	<font style="vertical-align: inherit;">
+		          		<font style="vertical-align: inherit;">{{lista.nome}}</font>
+		          	</font>
+		          </li>
+		          <br>
+		          <li>
+		          	<font style="vertical-align: inherit;">
+		          		<font style="vertical-align: inherit;">Obrigado por nos visitar</font>
+		          	</font>
+		          </li>
+		        </ul>
+		        <a href="categorias/{{titulo}}"  class="btn btn-lg btn-block btn-outline-primary">
+		        	<font style="vertical-align: inherit;">
+		        		<font style="vertical-align: inherit;">Veja mais</font>
+		        	</font>
+		        </a>
+		      </div>
+		    </div>
+
+		{{/each}}
+      
+    </div>
+  </div>
+    <P>tenho que organizar tudo, agora é testes e prova do conceito</P>

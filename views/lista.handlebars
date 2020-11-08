@@ -1,0 +1,46 @@
+<h1>lista</h1>
+
+<div class="container">
+  <div class="card-deck mb-3 text-center">
+  		{{#each listas}}
+		    <div class="card mb-4 shadow-sm">
+		      <div class="card-header">
+		        <h4 class="my-0 font-weight-normal">
+		        	<font style="vertical-align: inherit;">
+		        		<font style="vertical-align: inherit;">{{nome}}</font>
+		        	</font>
+		        </h4>
+		      </div>
+		      <div class="card-body">
+		        <h3 class="card-title pricing-card-title">
+		        	<font style="vertical-align: inherit;">
+		        		<font style="vertical-align: inherit;">{{sobrenome}}</font>
+		        	</font>
+		        </h3>
+		        <hr>
+		        <ul class="list-unstyled mt-3 mb-4">
+		          <li>
+		          	<font style="vertical-align: inherit;">
+		          		<font style="vertical-align: inherit;">{{email}}</font>
+		          	</font>
+		          </li>
+		          <hr>
+		          <li>
+		          	<font style="vertical-align: inherit;">
+		          		<font style="vertical-align: inherit;">{{date}}</font>
+		          	</font>
+		          </li>
+		          <hr>
+		          
+		          <br>
+		          <li>
+		          	<font style="vertical-align: inherit;">
+		          		<font style="vertical-align: inherit;">Obrigado por nos visitar</font>
+		          	</font>
+		          </li>
+		        </ul>
+		       </div>
+		    </div>
+		{{/each}}
+    </div>
+  </div>

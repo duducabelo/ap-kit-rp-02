@@ -1,0 +1,46 @@
+<ul class="nav justify-content-center bg-dark">
+  <li class="nav-item">
+    <a class="nav-link btn btn-outline-light " href="/admin/eduardo">admin</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link btn btn-outline-light ml-2" href="/admin/sobre">Sobre</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link btn btn-outline-light  ml-2 " href="/admin/criar-lista">Criar Lista</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link btn btn-outline-light  ml-2 " href="/admin/criar-postagens">Criar Postagens</a>
+  </li>
+</ul>
+{{#each erros}}
+    <div class="alert alert-dark">{{texto}}</div>
+{{/each}}
+
+<div class="card">
+  <div class="card-body">
+    <h3>Aqui vc cria a Postagem</h3>
+    <button onclick="history.back()">
+        <img src="/imagens/voltar.png" alt="voltar" style="width: 25px ">
+    </button>
+    <form action="/admin/criar-postagens" method="post">
+    	<label for="titulo">Titulo</label>
+    		<input type="text" id="titulo" name="titulo" placeholder="" class="form-control" required>
+        <label for="descricao">Descriçãoo</label>
+            <input type="descricao" id="descricao" name="descricao" placeholder="" class="form-control" required> 
+    	<label for="conteudo">Conteúdo</label>
+            <textarea type="text" id="conteudo" name="conteudo" placeholder="" class="form-control" required></textarea>
+    	<label for="lista">Lista</label>
+            <select class="custom-select" id="lista" name="lista">
+                {{#each listas}}
+                    <option value="{{_id}}">{{nome}}</option>
+                {{else}}
+                    <option value="0">Não a lista cadastrada</option>
+                {{/each}}    
+            </select>
+    	<button type="submit" class="btn btn-dark mt-3">salvar</button>	
+        <a  href="/admin/postagens" class="btn btn-danger mt-3">editar postagens</a>
+        <a  href="/admin/postagens" class="btn btn-dark mt-3">ver postagens</a>
+    </form>
+  </div>
+</div>
+

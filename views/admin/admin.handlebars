@@ -1,0 +1,39 @@
+<ul class="nav justify-content-center bg-dark">
+  <li class="nav-item">
+    <a class="nav-link btn btn-outline-light " href="/admin/eduardo">admin</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link btn btn-outline-light ml-2" href="/admin/sobre">Sobre</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link btn btn-outline-light  ml-2 " href="/admin/criar-lista">Criar Lista</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link btn btn-outline-light  ml-2 " href="/admin/criar-postagens">Criar Postagens</a>
+  </li>
+</ul>
+
+<div class="container">
+	<h1>A Lista</h1>
+</div>
+{{#each listas}}
+	
+    <div class="card">
+        <div class="card-body">
+            <h3>Nome: {{this.nome}}</h3>
+            <h3>Sobrenome: {{this.sobrenome}}</h3>
+            <h4>Email: {{this.email}}</h4>
+            <small>data : {{this.date}}</small>
+        </div>
+    </div>
+{{else}}
+    <div class="container">
+        <h4>Não a lista cadastrada</h4>
+    </div>    
+       
+{{/each}}
+
+<P>observaçao cada letra - , - . - nomes - objetos e etc... tem que estar certos e no lugar rsrsrs duducabelo; erros de portugues tudo bem, varivel, objetos, e etc... desde que seja cometido tambem onde vc chamalas  rsrsrs </P>
+
+		
+		
